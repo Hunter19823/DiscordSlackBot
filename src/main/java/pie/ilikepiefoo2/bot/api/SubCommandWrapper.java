@@ -1,4 +1,4 @@
-package pie.ilikepiefoo.bot.api;
+package pie.ilikepiefoo2.bot.api;
 
 import net.dv8tion.jda.api.interactions.DiscordLocale;
 import net.dv8tion.jda.api.interactions.commands.Command;
