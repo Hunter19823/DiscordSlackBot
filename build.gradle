@@ -14,7 +14,7 @@ dependencies {
     implementation("net.dv8tion:JDA:${jdaVersion}") {
         exclude module: 'opus-java'
     }
-    implementation("com.slack.api:bolt:${slackBoltVersion}")
+    implementation("com.slack.api:bolt-jetty:${slackBoltVersion}")
     implementation("software.amazon.awssdk:bom:2.19.5")
 }
 
