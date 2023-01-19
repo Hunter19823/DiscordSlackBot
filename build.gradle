@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'pie.ilikepiefoo'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation("net.dv8tion:JDA:${jdaVersion}") {
+        exclude module: 'opus-java'
+    }
+    implementation("com.slack.api:bolt:${slackBoltVersion}")
+    implementation("software.amazon.awssdk:bom:2.19.5")
+}
+
+test {
+    useJUnitPlatform()
+}
