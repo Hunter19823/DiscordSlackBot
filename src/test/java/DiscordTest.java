@@ -4,6 +4,7 @@ import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.utils.cache.CacheFlag;
+import pie.ilikepiefoo2.bot.api.discord.DiscordSlashCommands;
 
 public class DiscordTest {
     public static void main( String[] args ) {
@@ -19,12 +20,6 @@ public class DiscordTest {
         builder.setActivity(Activity.playing("Messing around with JDA Api"));
 
         JDA jda = builder.build();
+		DiscordSlashCommands.upsertCommand(jda);
     }
-
-    public class EventHandler extends ListenerAdapter {
-		@Override
-		public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
-			super.onSlashCommandInteraction(event);
-		}
-	}
 }
